@@ -24,7 +24,7 @@ def main(argv: list[str] | None = None) -> int:
     else:
         output_file = args.output_file
 
-    with open(output_file, 'w+') as f:
+    with open(output_file, 'w') as f:
         f.write(output_srt)
 
     return 0
