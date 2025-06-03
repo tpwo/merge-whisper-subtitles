@@ -1,0 +1,34 @@
+repos:
+- repo: https://github.com/pycqa/isort
+  rev: 6.0.1
+  hooks:
+  - id: isort
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.11.12
+  hooks:
+  - id: ruff
+    args: [--fix, --unsafe-fixes, --exit-non-zero-on-fix]
+  - id: ruff-format
+- repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+  rev: v2.14.0
+  hooks:
+  - id: pretty-format-yaml
+    args: [--autofix]
+  - id: pretty-format-toml
+    args: [--autofix, --indent=4, --no-sort, --trailing-commas]
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: check-docstring-first
+  - id: check-yaml
+  - id: debug-statements
+  - id: name-tests-test
+  - id: requirements-txt-fixer
+  - id: file-contents-sorter
+    files: \.gitignore
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.16.0
+  hooks:
+  - id: mypy
