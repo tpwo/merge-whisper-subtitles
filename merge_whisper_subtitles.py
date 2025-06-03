@@ -8,8 +8,8 @@ from pathlib import Path
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument('input_file', help='Input srt file with words')
-    parser.add_argument('-o', '--output-file', help='Output file name')
+    parser.add_argument('input_file', help='input srt file with words')
+    parser.add_argument('-o', '--output-file', help='output file name')
     args = parser.parse_args(argv)
 
     with open(args.input_file) as f:
