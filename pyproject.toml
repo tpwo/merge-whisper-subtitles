@@ -1,3 +1,9 @@
+[project]
+name = "merge-whisper-subtitles"
+version = "0.0.0"
+description = "Merge words from whisper-timestamped into easy-to-read subtitles."
+requires-python = "=>3.9.*"
+
 [tool.isort]
 add_imports = [
     "from __future__ import annotations",
